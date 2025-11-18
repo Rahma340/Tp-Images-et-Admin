@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("{{ movie.image.url }}");
+            background-size: cover;
+            color: white;
+            text-shadow: 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p>{{ movie.description }}</p>
+    <p>Année : {{ movie.release_year }}</p>
+    <a href="{% url 'movie_list' %}">Retour</a>
+</body>
+</html>
