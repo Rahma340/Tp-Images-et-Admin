@@ -5,10 +5,10 @@ from .models import Movie
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ("title" , "release_year" , "new")
+    list_display = ("title" , "release_year" , "is_new",)
 
-    list_editable = ("new")
+    list_editable = ("is_new",)
 
-    list_display_links = ("title")
+    list_display_links = ("title",)
 
-    search_fields = ("title" , "description")
+    search_fields = ("title" , "description",)
